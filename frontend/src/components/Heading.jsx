@@ -1,18 +1,15 @@
 import { useState } from "react";
 
 function Heading(){
-    const [currdate,setCurrDate]=useState(new Date().toLocaleString('en-US', {
+    const myFormat={
         day:"numeric",
         month: 'long',
         year: 'numeric'
-        }));
+        };
+    const [currdate,setCurrDate]=useState(new Date().toLocaleString('en-US', myFormat));
 
     setInterval(() => {
-        setCurrDate(new Date().toLocaleString('en-US', {
-            day:"numeric",
-            month: 'long',
-            year: 'numeric'
-            }));
+        setCurrDate(new Date().toLocaleString('en-US',myFormat ));
     }, 60000);
     
     return (
