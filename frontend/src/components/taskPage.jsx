@@ -53,7 +53,7 @@ return(
             </div>
         
             <div className="task-add-sec">
-            <input placeholder="What needs done?" className="task-add-input" type="text" name="newTask" value={newTask} onChange={handleInputChange}/>
+            <input placeholder="What needs be done?" className="task-add-input" type="text" name="newTask" value={newTask} onChange={handleInputChange}/>
             <button className="task-add-button" onClick={handleAdd}><AddIcon/></button>
             </div>
             </div>
