@@ -42,13 +42,10 @@ function TaskPage(){
 return(
         <div className="task-component">
             <Heading/>
-            
+
             <div className="task-content">
             <div className="task-sec">
                 {
-                    tasks.length===0?
-                    <p className="message">Looks like you don't have any task today</p>
-                    :
                     tasks.map(enListTask)
                 }
             </div>

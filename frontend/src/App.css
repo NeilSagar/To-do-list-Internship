@@ -98,3 +98,11 @@ body{
 button:hover{
     cursor: pointer;
 }
+
+.no-task-message{
+    font-size:16px;
+    word-spacing: 2px;
+    line-height: 1.2;
+    width:70%;
+    margin:20px auto;
+}
