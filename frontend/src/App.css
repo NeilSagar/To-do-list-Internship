@@ -36,6 +36,7 @@ body{
     transform: translateY(-2px);
 }
 
+
 .task-add-input{
     width:70%;
     margin:0;
@@ -51,6 +52,7 @@ body{
 .task-add-input:focus{
     outline: 0;
     border-bottom: 1px solid #526D82;
+    opacity: 0.8;
 }
 .task-add-input::placeholder{
     color:#526D82;
