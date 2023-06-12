@@ -4,8 +4,8 @@ import AddIcon from '@mui/icons-material/Add';
 
 import { addData,getAllInfo } from "../controller/controller";
 import Task from "./task";
-import styled from "@emotion/styled";
 
+import Heading from "./Heading";
 
 
 
@@ -41,7 +41,8 @@ function TaskPage(){
 
 return(
         <div className="task-component">
-            <h1 className="task-heading">Today</h1>
+            <Heading/>
+            
             <div className="task-content">
             <div className="task-sec">
                 {
