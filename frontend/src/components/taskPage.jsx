@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
 import React from "react";
+import AddIcon from '@mui/icons-material/Add';
 
-import { addData,getAllInfo,deleteIt } from "../controller/controller";
+import { addData,getAllInfo } from "../controller/controller";
+import Task from "./task";
+import styled from "@emotion/styled";
+
 
 
 
@@ -20,18 +24,13 @@ function TaskPage(){
         setNewTask(value);
     }
 
-    function handleDelete(event){
-        const task_index=event.target.id;
-        const task_name=tasks[task_index];
-        deleteIt(task_name);
-    }
+    
 
     function enListTask(task,i){
         return (
-            <div key={i}>
+            <div key={i} className="task-item">
 
-            <p style={{display:"inline-block"}} id={i} > {task.task_name}</p>
-            <button id={i} onClick={handleDelete}>delete</button>
+            <Task index={i} task={task}/>
 
             </div>
         )
@@ -41,22 +40,24 @@ function TaskPage(){
     },[tasks]);
 
 return(
-        <>
-            <h1>Today</h1>
+        <div className="task-component">
+            <h1 className="task-heading">Today</h1>
+            <div className="task-content">
             <div className="task-sec">
                 {
                     tasks.length===0?
-                    <p>Looks like you don't have any task today</p>
+                    <p className="message">Looks like you don't have any task today</p>
                     :
                     tasks.map(enListTask)
                 }
             </div>
-
+        
             <div className="task-add-sec">
-            <input type="text" name="newTask" value={newTask} onChange={handleInputChange}/>
-            <button onClick={handleAdd}>add</button>
+            <input placeholder="What needs done?" className="task-add-input" type="text" name="newTask" value={newTask} onChange={handleInputChange}/>
+            <button className="task-add-button" onClick={handleAdd}><AddIcon/></button>
             </div>
-        </>
+            </div>
+        </div>
     );
 }
 

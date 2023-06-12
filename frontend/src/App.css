@@ -1,0 +1,85 @@
+body{
+    background-image: url("https://www.transparenttextures.com/patterns/bright-squares.png");
+    background-color: #E6FFFD;
+}
+.task-component{
+    width:35%;
+    margin:50px auto;
+    text-align: center;
+    padding:20px;
+    
+}
+.task-heading{
+    background-color: #526D82;
+    padding:20px;
+    font-size:40px;
+    margin:0;
+    border-radius:20px;
+    color:#fff;
+}
+.task-content{
+    margin-top:50px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding:10px;
+}
+.task-item{
+    margin:20px 0;
+    display: flex;
+    justify-content: space-between;
+    padding:0 30px;
+    color:#526D82;
+}
+.task-item:hover{
+    color:#B70404;
+}
+
+
+.task-add-input{
+    width:70%;
+    margin:0;
+    border:0;
+    /* border-bottom: 1px solid black; */
+    padding:10px 0 3px 0;
+    font-size:24px;
+    background:none;
+    border-bottom: 1px solid #fff;
+}
+.task-add-input:hover{
+    border-bottom: 1px solid #526D82;
+}
+.task-add-input:focus{
+    outline: 0;
+    border-bottom: 1px solid #526D82;
+}
+.task-add-input::placeholder{
+    color:#526D82;
+}
+.task-add-sec{
+    padding:0 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.task-add-button{
+    width:60px;
+    height:60px;
+    border:0;
+    border-radius:30px;
+    background-color: #526D82;
+    color:white;
+}
+.task-delete-button{
+    width:50px;
+    height:50px;
+    border:0;
+    background:none;
+    color:#526D82;
+    border-radius: 25px;
+}
+.task-delete-button:hover{
+    color:#B70404;
+    background-color: #d5dadf;
+}
+button:hover{
+    cursor: pointer;
+}
