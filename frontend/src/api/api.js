@@ -12,7 +12,8 @@ export const getAllTasks=async()=>{
     }
 }
 
-export const addTask=async(data)=>{
+export const addTask=async(newTask)=>{
+    const data={task:newTask};
     try {
         const response=await axios.post(URL+"/addTask",data);
         return response;
