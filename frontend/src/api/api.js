@@ -24,7 +24,6 @@ export const addTask=async(newTask)=>{
 }
 
 export const deleteTask=async(task)=>{
-    console.log(task);
     try {
         const response=await axios.delete(URL+"/deleteTask/"+task);
         return response;
